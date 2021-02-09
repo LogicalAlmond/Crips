@@ -1,4 +1,4 @@
-#!/usr/bin/env python2.7
+#!/usr/bin/env python
 #
 #
 #
@@ -30,23 +30,23 @@ menu = '''\033[0m
     {0}--INSTALL & UPDATE
     {99}-Exit                                                                                                                   
  '''
-print logo
-print menu
+print(logo)
+print(menu)
 def quit():
-            con = raw_input('Continue [Y/n] -> ')
-            if con[0].upper() == 'N':
-                exit()
-            else:
-                os.system("clear")
-                print logo
-                print menu
-                select()
+  con = raw_input('Continue [Y/n] -> ')
+  if con[0].upper() == 'N':
+    exit()
+  else:
+    os.system("clear")
+    print(logo)
+    print(menu)
+    select()
            
 def  select():
   try:
     choice = input("Crips~# ")
     if choice == 1:
-      d3 = raw_input('Enter IP Or Domain : ')
+      d3 = input('Enter IP Or Domain : ')
       os.system("clear")
       print("""
  _       ____  ______  _________
@@ -65,7 +65,7 @@ def  select():
 	  os.system("cd Crips && sudo bash ./update.sh")
 	  os.system("crips")
     elif choice == 2:
-      d3 = raw_input('Enter IP Or Domain : ')
+      d3 = input('Enter IP Or Domain : ')
       os.system("clear")
       print("""
  ____ ____   __   ___ ____ ____ _____ __  __ ____ ____ 
@@ -77,7 +77,7 @@ def  select():
       print("")
       quit()
     elif choice == 3:
-      d3 = raw_input('Enter Domain : ')
+      d3 = input('Enter Domain : ')
       os.system("clear")
       print("""
 ______ _   _ _____   _                 _                
@@ -93,11 +93,11 @@ ______ _   _ _____   _                 _
       print("")
       quit()    
     elif choice == 0:
-      print "Bye Bye"
+      print("Bye Bye")
       os.system("clear")
       exit()
     elif choice == 4:
-	  d3 = raw_input('Enter IP Address - IP Range Or Domain  : ')
+	  d3 = input('Enter IP Address - IP Range Or Domain  : ')
 	  os.system("clear")
 	  print("""
  _____                            ____  _____ _____ 
@@ -110,7 +110,7 @@ ______ _   _ _____   _                 _
 	  print("")
 	  quit()
     elif choice == 5:
-	  d3 = raw_input('Enter IP Or Domain : ')
+	  d3 = input('Enter IP Or Domain : ')
 	  os.system("clear")
 	  print("""
    _____           _____ _____  
@@ -126,7 +126,7 @@ ______ _   _ _____   _                 _
 	  print("")
 	  quit()
     elif choice == 6:
-      d3 = raw_input('Enter IP Or Domain : ')
+      d3 = input('Enter IP Or Domain : ')
       os.system("clear")
       print("""
      __                         __                 
@@ -140,7 +140,7 @@ ______ _   _ _____   _                 _
       print("")
       quit()
     elif choice == 7:
-	  d3 = raw_input('Enter IP Or Domain : ')
+	  d3 = input('Enter IP Or Domain : ')
 	  os.system("clear")
 	  print("""
  (   (      (                             
@@ -163,5 +163,5 @@ ______ _   _ _____   _                 _
 	  print("\033[0m")
 	  quit()
   except(KeyboardInterrupt):
-    print ""
+    print("")
 select()
